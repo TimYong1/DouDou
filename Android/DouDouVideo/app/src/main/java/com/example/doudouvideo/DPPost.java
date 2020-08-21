@@ -16,7 +16,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class GetToken {
+public class DPPost {
 //    ,
 
     public static void GetRongCloudToken(String userId, String userName, String portraitUri, final DPCallback aDPCallback) {

@@ -100,7 +100,7 @@
         [self alertViewShow:@"请输入呼叫ID!"];
         return;
     }
-    [[RCCall sharedRCCall] startSingleCall:_callIdLab.text mediaType:RCCallMediaVideo];
+    [[RCCall sharedRCCall] startSingleCall:_callIdTextField.text mediaType:RCCallMediaVideo];
 }
 
 - (void)alertViewShow:(NSString *)message{

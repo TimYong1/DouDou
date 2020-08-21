@@ -33,9 +33,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".VideoActivity">
-        </activity>
-
         <activity
             android:name="io.rong.callkit.MultiVideoCallActivity"
             android:exported="true"
