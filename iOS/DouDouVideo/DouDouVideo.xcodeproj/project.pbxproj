@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		036AC85AFCB6D8C390ADBDBA /* Pods_DouDouVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA66E989296F26286712BC82 /* Pods_DouDouVideo.framework */; };
+		FD4220FD24ED00B100E5DF3F /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FD4220FC24ED00B100E5DF3F /* UserInfo.m */; };
+		FDF17A9A24ECEC420027FDAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF17A9924ECEC420027FDAF /* AppDelegate.m */; };
+		FDF17AA024ECEC430027FDAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF17A9F24ECEC430027FDAF /* ViewController.m */; };
+		FDF17AA324ECEC430027FDAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF17AA124ECEC430027FDAF /* Main.storyboard */; };
+		FDF17AA524ECEC440027FDAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF17AA424ECEC440027FDAF /* Assets.xcassets */; };
+		FDF17AA824ECEC440027FDAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF17AA624ECEC440027FDAF /* LaunchScreen.storyboard */; };
+		FDF17AAB24ECEC440027FDAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF17AAA24ECEC440027FDAF /* main.m */; };
+		FDF17AB624ECF29B0027FDAF /* DPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF17AB424ECF29A0027FDAF /* DPPost.m */; };
+		FDF17ABA24ECFA520027FDAF /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF17AB724ECFA520027FDAF /* libstdc++.6.0.9.tbd */; };
+		FDF17ABB24ECFA520027FDAF /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF17AB824ECFA520027FDAF /* libstdc++.6.tbd */; };
+		FDF17ABC24ECFA520027FDAF /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF17AB924ECFA520027FDAF /* libstdc++.tbd */; };
+		FDF17ABE24ECFA6F0027FDAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF17ABD24ECFA6F0027FDAF /* UIKit.framework */; };
+		FDF17AC124ECFA7B0027FDAF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF17ABF24ECFA7B0027FDAF /* AVFoundation.framework */; };
+		FDF17AC224ECFA7B0027FDAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF17AC024ECFA7B0027FDAF /* Foundation.framework */; };
+		FDF17AC424ECFB340027FDAF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF17AC324ECFB340027FDAF /* libc++.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39B60FFBE673B9BAFFF579E1 /* Pods-DouDouVideo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouDouVideo.release.xcconfig"; path = "Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo.release.xcconfig"; sourceTree = "<group>"; };
+		3B9A0FD8F8B728108BE381A1 /* Pods-DouDouVideo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouDouVideo.debug.xcconfig"; path = "Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo.debug.xcconfig"; sourceTree = "<group>"; };
+		62B89E07828AF27805339B70 /* Pods-DouDouVide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouDouVide.release.xcconfig"; path = "Target Support Files/Pods-DouDouVide/Pods-DouDouVide.release.xcconfig"; sourceTree = "<group>"; };
+		9C7F632A867F82990B194097 /* Pods-DouDouVide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouDouVide.debug.xcconfig"; path = "Target Support Files/Pods-DouDouVide/Pods-DouDouVide.debug.xcconfig"; sourceTree = "<group>"; };
+		AA66E989296F26286712BC82 /* Pods_DouDouVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouDouVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4220FB24ED00B100E5DF3F /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		FD4220FC24ED00B100E5DF3F /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		FD42210124ED044200E5DF3F /* DouDouVideo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DouDouVideo.pch; sourceTree = "<group>"; };
+		FDF17A9524ECEC420027FDAF /* 豆豆会议.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "豆豆会议.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF17A9824ECEC420027FDAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FDF17A9924ECEC420027FDAF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FDF17A9E24ECEC430027FDAF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FDF17A9F24ECEC430027FDAF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FDF17AA224ECEC430027FDAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDF17AA424ECEC440027FDAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDF17AA724ECEC440027FDAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDF17AA924ECEC440027FDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF17AAA24ECEC440027FDAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDF17AB424ECF29A0027FDAF /* DPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPost.m; sourceTree = "<group>"; };
+		FDF17AB524ECF29B0027FDAF /* DPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPost.h; sourceTree = "<group>"; };
+		FDF17AB724ECFA520027FDAF /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		FDF17AB824ECFA520027FDAF /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		FDF17AB924ECFA520027FDAF /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		FDF17ABD24ECFA6F0027FDAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FDF17ABF24ECFA7B0027FDAF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FDF17AC024ECFA7B0027FDAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FDF17AC324ECFB340027FDAF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDF17A9224ECEC420027FDAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF17AC424ECFB340027FDAF /* libc++.tbd in Frameworks */,
+				FDF17AC124ECFA7B0027FDAF /* AVFoundation.framework in Frameworks */,
+				FDF17AC224ECFA7B0027FDAF /* Foundation.framework in Frameworks */,
+				FDF17ABE24ECFA6F0027FDAF /* UIKit.framework in Frameworks */,
+				FDF17ABA24ECFA520027FDAF /* libstdc++.6.0.9.tbd in Frameworks */,
+				FDF17ABB24ECFA520027FDAF /* libstdc++.6.tbd in Frameworks */,
+				FDF17ABC24ECFA520027FDAF /* libstdc++.tbd in Frameworks */,
+				036AC85AFCB6D8C390ADBDBA /* Pods_DouDouVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0910DEB296AB21D8FFB4FF77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F632A867F82990B194097 /* Pods-DouDouVide.debug.xcconfig */,
+				62B89E07828AF27805339B70 /* Pods-DouDouVide.release.xcconfig */,
+				3B9A0FD8F8B728108BE381A1 /* Pods-DouDouVideo.debug.xcconfig */,
+				39B60FFBE673B9BAFFF579E1 /* Pods-DouDouVideo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		0EB95A76BD10B696C498D4FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDF17AC324ECFB340027FDAF /* libc++.tbd */,
+				FDF17ABF24ECFA7B0027FDAF /* AVFoundation.framework */,
+				FDF17AC024ECFA7B0027FDAF /* Foundation.framework */,
+				FDF17ABD24ECFA6F0027FDAF /* UIKit.framework */,
+				FDF17AB724ECFA520027FDAF /* libstdc++.6.0.9.tbd */,
+				FDF17AB824ECFA520027FDAF /* libstdc++.6.tbd */,
+				FDF17AB924ECFA520027FDAF /* libstdc++.tbd */,
+				AA66E989296F26286712BC82 /* Pods_DouDouVideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDF17A8C24ECEC420027FDAF = {
+			isa = PBXGroup;
+			children = (
+				FDF17A9724ECEC420027FDAF /* DouDouVideo */,
+				FDF17A9624ECEC420027FDAF /* Products */,
+				0910DEB296AB21D8FFB4FF77 /* Pods */,
+				0EB95A76BD10B696C498D4FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FDF17A9624ECEC420027FDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDF17A9524ECEC420027FDAF /* 豆豆会议.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDF17A9724ECEC420027FDAF /* DouDouVideo */ = {
+			isa = PBXGroup;
+			children = (
+				FDF17A9824ECEC420027FDAF /* AppDelegate.h */,
+				FDF17A9924ECEC420027FDAF /* AppDelegate.m */,
+				FDF17A9E24ECEC430027FDAF /* ViewController.h */,
+				FDF17A9F24ECEC430027FDAF /* ViewController.m */,
+				FDF17AB524ECF29B0027FDAF /* DPPost.h */,
+				FDF17AB424ECF29A0027FDAF /* DPPost.m */,
+				FDF17AA124ECEC430027FDAF /* Main.storyboard */,
+				FDF17AA424ECEC440027FDAF /* Assets.xcassets */,
+				FDF17AA624ECEC440027FDAF /* LaunchScreen.storyboard */,
+				FDF17AA924ECEC440027FDAF /* Info.plist */,
+				FDF17AAA24ECEC440027FDAF /* main.m */,
+				FD4220FB24ED00B100E5DF3F /* UserInfo.h */,
+				FD4220FC24ED00B100E5DF3F /* UserInfo.m */,
+				FD42210124ED044200E5DF3F /* DouDouVideo.pch */,
+			);
+			path = DouDouVideo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDF17A9424ECEC420027FDAF /* DouDouVideo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF17AAE24ECEC440027FDAF /* Build configuration list for PBXNativeTarget "DouDouVideo" */;
+			buildPhases = (
+				5D33744E50A62C8DA8959BDF /* [CP] Check Pods Manifest.lock */,
+				FDF17A9124ECEC420027FDAF /* Sources */,
+				FDF17A9224ECEC420027FDAF /* Frameworks */,
+				FDF17A9324ECEC420027FDAF /* Resources */,
+				D234134ED91A595C8FC79D28 /* [CP] Embed Pods Frameworks */,
+				C933CCD4F8638146815DC61F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DouDouVideo;
+			productName = DouDouVide;
+			productReference = FDF17A9524ECEC420027FDAF /* 豆豆会议.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDF17A8D24ECEC420027FDAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "yupeng xia";
+				TargetAttributes = {
+					FDF17A9424ECEC420027FDAF = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = FDF17A9024ECEC420027FDAF /* Build configuration list for PBXProject "DouDouVideo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDF17A8C24ECEC420027FDAF;
+			productRefGroup = FDF17A9624ECEC420027FDAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDF17A9424ECEC420027FDAF /* DouDouVideo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDF17A9324ECEC420027FDAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF17AA824ECEC440027FDAF /* LaunchScreen.storyboard in Resources */,
+				FDF17AA524ECEC440027FDAF /* Assets.xcassets in Resources */,
+				FDF17AA324ECEC430027FDAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D33744E50A62C8DA8959BDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DouDouVideo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C933CCD4F8638146815DC61F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D234134ED91A595C8FC79D28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DouDouVideo/Pods-DouDouVideo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDF17A9124ECEC420027FDAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF17AB624ECF29B0027FDAF /* DPPost.m in Sources */,
+				FDF17AA024ECEC430027FDAF /* ViewController.m in Sources */,
+				FDF17A9A24ECEC420027FDAF /* AppDelegate.m in Sources */,
+				FDF17AAB24ECEC440027FDAF /* main.m in Sources */,
+				FD4220FD24ED00B100E5DF3F /* UserInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FDF17AA124ECEC430027FDAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDF17AA224ECEC430027FDAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDF17AA624ECEC440027FDAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDF17AA724ECEC440027FDAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDF17AAC24ECEC440027FDAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FDF17AAD24ECEC440027FDAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDF17AAF24ECEC440027FDAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9A0FD8F8B728108BE381A1 /* Pods-DouDouVideo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MS455BQ866;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DouDouVideo/DouDouVideo.pch;
+				INFOPLIST_FILE = DouDouVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhcw.zcwqy;
+				PRODUCT_NAME = "豆豆会议";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7";
+			};
+			name = Debug;
+		};
+		FDF17AB024ECEC440027FDAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B60FFBE673B9BAFFF579E1 /* Pods-DouDouVideo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MS455BQ866;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DouDouVideo/DouDouVideo.pch;
+				INFOPLIST_FILE = DouDouVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhcw.zcwqy;
+				PRODUCT_NAME = "豆豆会议";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e armv7";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDF17A9024ECEC420027FDAF /* Build configuration list for PBXProject "DouDouVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF17AAC24ECEC440027FDAF /* Debug */,
+				FDF17AAD24ECEC440027FDAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF17AAE24ECEC440027FDAF /* Build configuration list for PBXNativeTarget "DouDouVideo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF17AAF24ECEC440027FDAF /* Debug */,
+				FDF17AB024ECEC440027FDAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDF17A8D24ECEC420027FDAF /* Project object */;
+}

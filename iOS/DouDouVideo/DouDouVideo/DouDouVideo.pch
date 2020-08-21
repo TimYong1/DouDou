@@ -1,0 +1,17 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma mark <--------------弱引用处理-------------->
+#define _other_block(x) __block typeof(x) weak_##x = x
+#define arc_block(x)    __block typeof(x) __weak weak_##x = x
+
+#import "MBProgressHUD.h"
+
+#endif /* PrefixHeader_pch */
