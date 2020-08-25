@@ -1,5 +1,7 @@
 package com.example.doudouvideo;
 
+import android.app.Activity;
+
 import com.orhanobut.logger.Logger;
 
 import org.json.JSONException;
@@ -16,13 +18,14 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class DPPost {
-//    ,
+public class DDPost {
+    public static void GetRongCloudToken(Activity activity, String userId, String userName, String portraitUri, final DPCallback aDPCallback) {
+        DDApplication application = (DDApplication) activity.getApplication();
+        DDModel aDDModel = application.getaDDModel();
 
-    public static void GetRongCloudToken(String userId, String userName, String portraitUri, final DPCallback aDPCallback) {
-        String url = "https://api-bj.ronghub.com/user/getToken.json";
-        String App_Key = "3argexb63svke"; //开发者平台分配的 App Key。
-        String App_Secret = "NgmYSXvHH4h";
+        String url = aDDModel.tokenUrl;
+        String App_Key = aDDModel.appKey;
+        String App_Secret = aDDModel.appSecret;
         String Timestamp = String.valueOf(System.currentTimeMillis() / 1000);//时间戳，从 1970 年 1 月 1 日 0 点 0 分 0 秒开始到现在的秒数。
         String Nonce = String.valueOf(Math.floor(Math.random() * 1000000));//随机数，无长度限制。
         String Signature = sha1(App_Secret + Nonce + Timestamp);//数据签名。

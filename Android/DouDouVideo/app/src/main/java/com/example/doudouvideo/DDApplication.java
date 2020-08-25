@@ -6,12 +6,12 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
-import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
 
 public class DDApplication extends Application {
 
     private static DDApplication instance;
-    private UserInfo aUserInfo;
+    private DDModel aDDModel;
 
     @Override
     public void onCreate() {
@@ -19,9 +19,11 @@ public class DDApplication extends Application {
         initActivityLifecycleCallbacks();
 
         instance = this;
-        aUserInfo = new UserInfo();
+        aDDModel = new DDModel();
+        aDDModel.appKey = "3argexb63svke";
+        aDDModel.appSecret = "NgmYSXvHH4h";
 
-        RongIM.init(this, "3argexb63svke");
+        RongIMClient.init(this, aDDModel.appKey, false);
     }
 
     /**
@@ -96,11 +98,11 @@ public class DDApplication extends Application {
         DDApplication.instance = instance;
     }
 
-    public UserInfo getaUserInfo() {
-        return aUserInfo;
+    public DDModel getaDDModel() {
+        return aDDModel;
     }
 
-    public void setaUserInfo(UserInfo aUserInfo) {
-        this.aUserInfo = aUserInfo;
+    public void setaDDModel(DDModel aDDModel) {
+        this.aDDModel = aDDModel;
     }
 }

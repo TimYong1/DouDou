@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.doudouvideo"
-        minSdkVersion 27
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -33,11 +33,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    //call_kit、call_lib、im_kit、im_lib的版本号码必须一致
-    implementation 'cn.rongcloud.sdk:call_kit:4.0.0'
-    implementation 'cn.rongcloud.sdk:call_lib:4.0.0'
-    implementation 'cn.rongcloud.sdk:im_kit:4.0.0'
+    //融云TV视频聊天库
     implementation 'cn.rongcloud.sdk:im_lib:4.0.0'
+    implementation 'cn.rongcloud.sdk:rtc_lib:4.0.0'
 
     implementation 'com.orhanobut:logger:2.2.0'
 
