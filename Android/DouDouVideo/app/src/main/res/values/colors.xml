@@ -3,4 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!-- 应用启动页(StartingWindow)的theme的背景色 -->
+    <color name="startingwindow_bgcolor">#00bfff</color>
 </resources>
