@@ -6,6 +6,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 
+import com.example.doudouvideo.modle.DDModel;
+
 import io.rong.imlib.RongIMClient;
 
 public class DDApplication extends Application {
@@ -35,7 +37,7 @@ public class DDApplication extends Application {
             @Override
             public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
                 //activity创建生命周期
-                if(activity instanceof MainActivity){
+                if(activity instanceof DDMainActivity){
                     //判断创建的activity对应对象
 
                 }

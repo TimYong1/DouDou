@@ -1,4 +1,4 @@
-package com.example.doudouvideo;
+package com.example.doudouvideo.utils;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -7,7 +7,7 @@ import android.animation.ValueAnimator;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Tools {
+public class DDTools {
 
     private static int mFocusWidth;
     private static int mFoucsHeight;
@@ -15,9 +15,6 @@ public class Tools {
     public static void focusAnimator(View v, View onFousView) {
         focusAnimator(v, onFousView, -1, 0, 0);
     }
-
-
-
 
     public static void focusAnimator(View parentView, final View focusView, int scrollY, int offSetX, int offSetY) {
         int[] fromLocation = new int[2];

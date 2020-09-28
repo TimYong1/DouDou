@@ -1,4 +1,4 @@
-package com.example.doudouvideo;
+package com.example.doudouvideo.modle;
 
 public class DDModel {
     public String appKey;

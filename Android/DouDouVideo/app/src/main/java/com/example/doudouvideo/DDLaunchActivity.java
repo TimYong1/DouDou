@@ -5,12 +5,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Splash extends AppCompatActivity {
+public class DDLaunchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_launch);
 
         Thread myThread = new Thread(){//创建子线程
             @Override
@@ -18,7 +18,7 @@ public class Splash extends AppCompatActivity {
                 try{
                     sleep(2000);//使程序休眠五秒
                     //启动MainActivity
-                    Intent it = new Intent(getApplicationContext(),MainActivity.class);
+                    Intent it = new Intent(getApplicationContext(), DDMainActivity.class);
                     startActivity(it);
                     //关闭当前活动
                     finish();

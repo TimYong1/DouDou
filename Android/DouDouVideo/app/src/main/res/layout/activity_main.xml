@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".MainActivity">
+    tools:context=".DDMainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -190,6 +190,16 @@
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/version_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingTop="8dp"
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            android:text="V " />
     </RelativeLayout>
 
     <View
@@ -198,4 +208,5 @@
         android:layout_height="wrap_content"
         android:background="@drawable/focus_bg"
         android:visibility="gone" />
+
 </LinearLayout>

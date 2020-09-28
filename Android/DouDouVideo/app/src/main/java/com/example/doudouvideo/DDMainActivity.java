@@ -11,12 +11,19 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.example.doudouvideo.modle.DDModel;
+import com.example.doudouvideo.requst.DDPost;
+import com.example.doudouvideo.utils.DDPackageUtils;
+import com.example.doudouvideo.update.DDUpdateApk;
+import com.example.doudouvideo.utils.DDTools;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,7 +51,7 @@ import cn.rongcloud.rtc.base.RTCErrorCode;
 import cn.rongcloud.rtc.stream.local.RongRTCCapture;
 import io.rong.imlib.RongIMClient;
 
-public class MainActivity extends AppCompatActivity implements View.OnFocusChangeListener {
+public class DDMainActivity extends AppCompatActivity implements View.OnFocusChangeListener {
     private static final String[] MANDATORY_PERMISSIONS = {
             "android.permission.MODIFY_AUDIO_SETTINGS",
             "android.permission.RECORD_AUDIO",
@@ -77,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
         aDDModel.name = userId;
         aDDModel.userId = userId;
         aDDModel.portraitUri = userId;
+
+        String appVersion = DDPackageUtils.getVersionCode(this);
+        TextView version_textview = findViewById(R.id.version_textview);
+        version_textview.setText("V " + appVersion);
 
         checkPermissions();
         frameyout_bigVideo = (FrameLayout) findViewById(R.id.frameyout_bigVideo);
@@ -114,13 +125,18 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
 //            btn_camera.setVisibility(View.GONE);
 //        }
 
-        getToken();
+        DDUpdateApk.uptateApk(this, true, new DDUpdateApk.DDCallback(){
+            @Override
+            public void callBack() {
+                getToken();
+            };
+        });
     }
 
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
         if (hasFocus){
-            Tools.focusAnimator(v,onFousView);
+            DDTools.focusAnimator(v,onFousView);
         }
     }
 
@@ -189,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
         DDModel aDDModel = application.getaDDModel();
         aDDModel.tokenUrl = "https://api-bj.ronghub.com/user/getToken.json";
 
-        DDPost.GetRongCloudToken(this, aDDModel.name, aDDModel.userId, aDDModel.portraitUri, new DDPost.DPCallback() {
+        DDPost.GetRongCloudToken(this, aDDModel.name, aDDModel.userId, aDDModel.portraitUri, new DDPost.DDCallback() {
             @Override
             public void callBackSuccess(JSONObject jsonobj) {
                 try {
@@ -198,17 +214,17 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
                     if (code.equals("200")) {
                         rongConnect(token);
                     } else {
-                        Toast.makeText(MainActivity.this, "获取token失败! code:" + code, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DDMainActivity.this, "获取token失败! code:" + code, Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(MainActivity.this, "获取token失败，数据解析错误!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "获取token失败，数据解析错误!", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void callBackFailure(String message) {
-                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(DDMainActivity.this, message, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -219,7 +235,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
             RongIMClient.connect(cacheToken, new RongIMClient.ConnectCallback() {
                 @Override
                 public void onSuccess(String s) {
-                    Toast.makeText(MainActivity.this, "登陆成功!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "登陆成功!", Toast.LENGTH_SHORT).show();
 
                     if (RongIMClient.getInstance().getCurrentConnectionStatus() == RongIMClient.ConnectionStatusListener.ConnectionStatus.CONNECTED) {
                         joinRoom();
@@ -228,12 +244,12 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
 
                 @Override
                 public void onError(RongIMClient.ConnectionErrorCode connectionErrorCode) {
-                    Toast.makeText(MainActivity.this, "登陆失败!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "登陆失败!", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onDatabaseOpened(RongIMClient.DatabaseOpenStatus databaseOpenStatus) {
-                    Toast.makeText(MainActivity.this, "登陆失败!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "登陆失败!", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -268,8 +284,8 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
         RCRTCEngine.getInstance().joinRoom(aDDModel.roomId, new IRCRTCResultDataCallback<RCRTCRoom>() {
             @Override
             public void onSuccess(RCRTCRoom rcrtcRoom) {
-                Toast.makeText(MainActivity.this, "加入房间成功", Toast.LENGTH_SHORT).show();
-                MainActivity.this.rcrtcRoom = rcrtcRoom;
+                Toast.makeText(DDMainActivity.this, "加入房间成功", Toast.LENGTH_SHORT).show();
+                DDMainActivity.this.rcrtcRoom = rcrtcRoom;
                 rcrtcRoom.registerRoomListener(roomEventsListener);
                 //开启摄像头
                 RongRTCCapture.getInstance().startCameraCapture();
@@ -283,7 +299,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
 
             @Override
             public void onFailed(RTCErrorCode rtcErrorCode) {
-                Toast.makeText(MainActivity.this, "加入房间失败：" + rtcErrorCode.getReason(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(DDMainActivity.this, "加入房间失败：" + rtcErrorCode.getReason(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -296,7 +312,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(MainActivity.this, "退出成功!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DDMainActivity.this, "退出成功!", Toast.LENGTH_SHORT).show();
                         rcrtcRoom = null;
                     }
                 });
@@ -304,7 +320,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
 
             @Override
             public void onFailed(RTCErrorCode rtcErrorCode) {
-                Toast.makeText(MainActivity.this, "退出房间失败：" + rtcErrorCode.getReason(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(DDMainActivity.this, "退出房间失败：" + rtcErrorCode.getReason(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -313,12 +329,12 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
         rcrtcRoom.getLocalUser().publishDefaultStreams(new IRCRTCResultCallback() {
             @Override
             public void onSuccess() {
-                Toast.makeText(MainActivity.this, "发布资源成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DDMainActivity.this, "发布资源成功", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailed(RTCErrorCode rtcErrorCode) {
-                Toast.makeText(MainActivity.this, "发布失败：" + rtcErrorCode.getReason(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(DDMainActivity.this, "发布失败：" + rtcErrorCode.getReason(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -382,12 +398,12 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
             rcrtcRoom.getLocalUser().subscribeStreams(list, new IRCRTCResultCallback() {
                 @Override
                 public void onSuccess() {
-                    Toast.makeText(MainActivity.this, "订阅成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "订阅成功", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onFailed(RTCErrorCode rtcErrorCode) {
-                    Toast.makeText(MainActivity.this, "订阅失败：" + rtcErrorCode, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "订阅失败：" + rtcErrorCode, Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -414,7 +430,7 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
          */
         @Override
         public void onUserJoined(RCRTCRemoteUser rcrtcRemoteUser) {
-            Toast.makeText(MainActivity.this, "用户：" + rcrtcRemoteUser.getUserId() + " 加入房间", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DDMainActivity.this, "用户：" + rcrtcRemoteUser.getUserId() + " 加入房间", Toast.LENGTH_SHORT).show();
         }
 
         /**
@@ -461,12 +477,12 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
             rcrtcRoom.getLocalUser().subscribeStreams(inputStreams, new IRCRTCResultCallback() {
                 @Override
                 public void onSuccess() {
-                    Toast.makeText(MainActivity.this, "订阅成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "订阅成功", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onFailed(RTCErrorCode errorCode) {
-                    Toast.makeText(MainActivity.this, "订阅失败：" + errorCode.getReason(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DDMainActivity.this, "订阅失败：" + errorCode.getReason(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -662,5 +678,4 @@ public class MainActivity extends AppCompatActivity implements View.OnFocusChang
             videoConfigBuilder.setMaxRate(4000);
         }
     }
-
 }

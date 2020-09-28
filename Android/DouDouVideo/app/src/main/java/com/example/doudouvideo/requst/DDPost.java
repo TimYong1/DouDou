@@ -1,7 +1,9 @@
-package com.example.doudouvideo;
+package com.example.doudouvideo.requst;
 
 import android.app.Activity;
 
+import com.example.doudouvideo.DDApplication;
+import com.example.doudouvideo.modle.DDModel;
 import com.orhanobut.logger.Logger;
 
 import org.json.JSONException;
@@ -19,7 +21,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class DDPost {
-    public static void GetRongCloudToken(Activity activity, String userId, String userName, String portraitUri, final DPCallback aDPCallback) {
+    public static void GetRongCloudToken(Activity activity, String userId, String userName, String portraitUri, final DDCallback aDDCallback) {
         DDApplication application = (DDApplication) activity.getApplication();
         DDModel aDDModel = application.getaDDModel();
 
@@ -52,21 +54,21 @@ public class DDPost {
         okHttpClient.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                aDPCallback.callBackFailure("网络请求失败!");
+                aDDCallback.callBackFailure("网络请求失败!");
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 try {
                     JSONObject json = new JSONObject(response.body().string());
-                    aDPCallback.callBackSuccess(json);
+                    aDDCallback.callBackSuccess(json);
                 }catch (JSONException e) {
-                    aDPCallback.callBackFailure("数据解析失败!");
+                    aDDCallback.callBackFailure("数据解析失败!");
                 }
             }
         });
     }
 
-    public interface DPCallback{
+    public interface DDCallback {
         void callBackSuccess(JSONObject jsonobj);
 
         void callBackFailure(String message);
