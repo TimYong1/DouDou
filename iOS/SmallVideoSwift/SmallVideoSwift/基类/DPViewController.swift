@@ -1,6 +1,6 @@
 import UIKit
 
-class DPBaseViewController: UIViewController {
+class DPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
